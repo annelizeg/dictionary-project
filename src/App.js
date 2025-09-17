@@ -1,6 +1,7 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Dictionary from "./Dictionary";
+import Footer from "./Footer";
 
 export default function App() {
   return (
@@ -10,6 +11,7 @@ export default function App() {
           <h1>SophLex Dictionary</h1>
         </header>
         <Dictionary />
+        <Footer />
       </div>
     </div>
   );
