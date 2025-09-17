@@ -1,6 +1,7 @@
 .App {
   margin: 30px 0;
   text-align: center;
+  background-color: #e5e7eb;
 }
 
 .App .container {
@@ -8,3 +9,17 @@
   padding: 30px;
   border-radius: 4px;
 }
+
+/* 
+Colours: 
+#1E3A8A //Deep Blue
+#065f46 //Deep Green
+#FACC15 // Yellow highlight
+#6D28D9 or #9333EA //Bright Purple
+#F9FAFB //Off-white
+
+ text: 
+  primary: '#111827',
+  secondary: '#374151
+
+*/
