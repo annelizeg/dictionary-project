@@ -2,7 +2,7 @@ import React from "react";
 import Meanings from "./Meanings";
 
 export default function Results(props) {
-  //   console.log(props);
+  console.log(props);
 
   if (props.results) {
     return (
