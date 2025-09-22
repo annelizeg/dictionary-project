@@ -10,7 +10,7 @@ export default function App() {
         <header className="App-header">
           <h1>SophLex Dictionary</h1>
         </header>
-        <Dictionary />
+        <Dictionary defaultKeyword="sunset" />
         <Footer />
       </div>
     </div>
