@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import axios from "axios";
 import Results from "./Results";
 
+import "./Dictionary.css";
+
 export default function Dictionary() {
-  const [keyword, setKeyword] = useState("");
+  const [keyword, setKeyword] = useState("sunset");
   const [results, setResults] = useState(null);
 
   function getKeywordMeanings(response) {
@@ -31,17 +33,24 @@ export default function Dictionary() {
 
   return (
     <div className="Dictionary">
-      <form onSubmit={search}>
-        <h2>What word do you want to look up?</h2>
-        <input
-          type="search"
-          placeholder="Search for a word"
-          autoFocus
-          onChange={handelKeywordChange}
-        />
-        <button className="btn btn-primary">Search</button>
-      </form>
-
+      <section>
+        <form onSubmit={search}>
+          <h4>What word do you want to look up?</h4>
+          <div className="row justify-content-center">
+            <input
+              className="col-10"
+              type="search"
+              placeholder="Search for a word"
+              autoFocus
+              onChange={handelKeywordChange}
+            />
+            <button className="btn col-2 btn-primary">Search</button>
+          </div>
+          <div className="hint">
+            Suggested words: sunset, forest, animals, rainbow...
+          </div>
+        </form>
+      </section>
       <Results results={results} />
     </div>
   );
