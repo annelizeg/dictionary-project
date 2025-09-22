@@ -1,0 +1,13 @@
+.Synonyms {
+  margin-top: 10px;
+  opacity: 0.9;
+}
+
+.Synonyms span {
+  /* display: inline-block; */
+  /* font-size: 0.9rem; */
+  padding-right: 15px;
+  /* opacity: 0.9; */
+  line-height: 1;
+  font-style: oblique;
+}

@@ -54,10 +54,10 @@ export default function Dictionary(props) {
                 autoFocus
                 onChange={handelKeywordChange}
               />
-              <button className="btn col-2 btn-primary">Search</button>
+              <button className="btn col-2">Search</button>
             </div>
             <div className="hint">
-              Suggested words: sunset, forest, animals, rainbow...
+              Suggested words: sunset, wine, forest, animals, rainbow...
             </div>
           </form>
         </section>

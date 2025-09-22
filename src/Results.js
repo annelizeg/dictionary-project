@@ -10,8 +10,7 @@ export default function Results(props) {
       <div className="Results">
         <section>
           <h2>{props.results.word}</h2>
-          <h6 style={{ color: "#374151" }}>{props.results.phonetic}</h6>{" "}
-          {/*SelfNote: Move style later to CSS file.  */}
+          <h6>{props.results.phonetic}</h6>{" "}
         </section>
         {props.results.meanings.map(function (meaning, index) {
           return (
