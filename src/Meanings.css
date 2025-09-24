@@ -6,6 +6,7 @@
 
 .Meanings .example {
   font-style: italic;
-  opacity: 0.8;
+  color: #374151;
+  /* opacity: 0.9; */
   margin-top: 10px;
 }

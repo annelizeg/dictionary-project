@@ -24,13 +24,13 @@
   font-weight: 500;
   padding: 6px 30px;
   color: #fff;
-  background-color: #9333ea;
+  background-color: #065f46;
   transition: all 150ms ease-in-out;
 }
 
 .Dictionary button:hover {
-  color: #fff;
-  background-color: #6d28d9;
+  color: #111827;
+  background-color: #facc15;
 }
 
 .Dictionary .hint {
