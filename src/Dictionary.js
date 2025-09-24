@@ -34,7 +34,7 @@ export default function Dictionary(props) {
     //Documentation: Pexels Images/Videos API - https://www.pexels.com/api/documentation?language=javascript#introduction
     const pexelsApiKey =
       "7LiLP7QOB5wMYTTiXOfk5S2LFFke2cLauEI2gYEGr9ofmhFQZGXj1OSo";
-    const pexelsApiUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=1`;
+    const pexelsApiUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=9`;
     const headers = { Authorization: `${pexelsApiKey}` };
     axios.get(pexelsApiUrl, { headers }).then(handelPexelsResponse);
   }

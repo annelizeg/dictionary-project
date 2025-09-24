@@ -1,9 +1,31 @@
 import React from "react";
+import "./Photos.css";
 
 export default function Photos(props) {
   if (props.photos) {
-    console.log(props.photos);
-    return <div className="Photos">Hello from Photos</div>;
+    return (
+      <div className="Photos">
+        <div className="row">
+          {props.photos.map(function (photo, index) {
+            return (
+              <div className="col-4" key={index}>
+                <a
+                  href={photo.src.original}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src={photo.src.tiny}
+                    alt={photo.alt}
+                    className="img-fluid, img-thumbnail"
+                  />
+                </a>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    );
   } else {
     return null;
   }
