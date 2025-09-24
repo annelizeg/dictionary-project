@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Results from "./Results";
+import Photos from "./Photos";
 
 import "./Dictionary.css";
 
@@ -8,10 +9,15 @@ export default function Dictionary(props) {
   const [keyword, setKeyword] = useState(props.defaultKeyword);
   const [results, setResults] = useState(null);
   const [loaded, setLoaded] = useState(false);
+  const [photos, setPhotos] = useState(null);
 
   function getKeywordMeanings(response) {
     // console.log(response.data);
     setResults(response.data);
+  }
+
+  function handelPexelsResponse(response) {
+    setPhotos(response.data.photos);
   }
 
   function search() {
@@ -24,6 +30,13 @@ export default function Dictionary(props) {
     // const dictionaryApiURL = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
 
     axios.get(dictionaryApiURL).then(getKeywordMeanings);
+
+    //Documentation: Pexels Images/Videos API - https://www.pexels.com/api/documentation?language=javascript#introduction
+    const pexelsApiKey =
+      "7LiLP7QOB5wMYTTiXOfk5S2LFFke2cLauEI2gYEGr9ofmhFQZGXj1OSo";
+    const pexelsApiUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=1`;
+    const headers = { Authorization: `${pexelsApiKey}` };
+    axios.get(pexelsApiUrl, { headers }).then(handelPexelsResponse);
   }
 
   function load() {
@@ -62,6 +75,7 @@ export default function Dictionary(props) {
           </form>
         </section>
         <Results results={results} />
+        <Photos photos={photos} />
       </div>
     );
   } else {
