@@ -8,7 +8,10 @@ export default function App() {
     <div className="App">
       <div className="container">
         <header className="App-header">
-          <h1>SophLex Dictionary</h1>
+          <h1>
+            Welcome to
+            <div>SophLex Dictionary</div>
+          </h1>
         </header>
         <Dictionary defaultKeyword="sunset" />
         <Footer />

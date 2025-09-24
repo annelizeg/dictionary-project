@@ -10,7 +10,7 @@
   /* background-color: #1e3a8a; */
   background-color: #065f46;
   max-width: 960px;
-  padding: 60px 30px;
+  padding: 60px;
   border: 3px double #facc15;
   border-radius: 4px;
 }
@@ -25,7 +25,7 @@
 
 .App h1 {
   font-size: calc(2.375rem + 1.5vw);
-  font-weight: 600;
+  font-weight: 700;
   text-shadow: 1px 2px 1px #111827, 2px 3px 0px #facc15;
 }
 
@@ -46,3 +46,9 @@ Colours:
 background-color: #e5e7eb;
 background-color: rgb(176, 156, 196);
 */
+
+@media (max-width: 575px) {
+  .App .container {
+    padding: 60px 20px;
+  }
+}

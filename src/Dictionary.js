@@ -56,24 +56,28 @@ export default function Dictionary(props) {
   if (loaded) {
     return (
       <div className="Dictionary">
-        <section>
+        <div className="form">
           <form onSubmit={handelSubmit}>
             <h4>What word do you want to look up?</h4>
             <div className="row justify-content-center">
-              <input
-                className="col-10"
-                type="search"
-                placeholder="Search for a word"
-                autoFocus
-                onChange={handelKeywordChange}
-              />
-              <button className="btn col-2">Search</button>
-            </div>
-            <div className="hint">
-              Suggested words: sunset, wine, forest, animals, rainbow...
+              <div className="col col-sm-6">
+                <input
+                  type="search"
+                  placeholder="Search for a word"
+                  autoFocus
+                  onChange={handelKeywordChange}
+                  aria-describedby="passwordHelpInline"
+                />
+                <div className=" hint">
+                  Suggested words: sunset, wine, forest, animals...
+                </div>{" "}
+              </div>
+              <div className="col-0 col-sm-3 col-md-2">
+                <button className="btn ">Search</button>
+              </div>
             </div>
           </form>
-        </section>
+        </div>
         <Results results={results} />
         <Photos photos={photos} />
       </div>
