@@ -7,3 +7,9 @@
 .Results h6 {
   color: #374151;
 }
+
+@media (max-width: 575px) {
+  .Results h2 {
+    font-size: 32px;
+  }
+}

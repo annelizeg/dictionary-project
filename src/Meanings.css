@@ -19,3 +19,13 @@
   /* opacity: 0.9; */
   margin-top: 10px;
 }
+
+@media (max-width: 575px) {
+  .Meanings h5 {
+    font-size: 1.2rem;
+  }
+
+  .Meanings .descriptions {
+    font-size: 0.9rem;
+  }
+}

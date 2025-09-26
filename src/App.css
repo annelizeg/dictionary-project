@@ -24,7 +24,7 @@
 }
 
 .App h1 {
-  font-size: calc(2.375rem + 1.5vw);
+  font-size: calc(3.375rem + 1.5vw);
   font-weight: 700;
   text-shadow: 1px 2px 1px #111827, 2px 3px 0px #facc15;
 }
@@ -49,6 +49,14 @@ background-color: rgb(176, 156, 196);
 
 @media (max-width: 575px) {
   .App .container {
-    padding: 60px 20px;
+    padding: 40px 20px;
+  }
+
+  .App h1 {
+    font-size: calc(2.375rem + 1.5vw);
+  }
+
+  .App .App-header {
+    padding: 0;
   }
 }
