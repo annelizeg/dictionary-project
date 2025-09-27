@@ -13,7 +13,7 @@ export default function App() {
             <div>SophLex Dictionary</div>
           </h1>
         </header>
-        <Dictionary defaultKeyword="sunset" />
+        <Dictionary defaultKeyword="art" />
         <Footer />
       </div>
     </div>

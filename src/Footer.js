@@ -26,6 +26,7 @@ export default function Footer() {
           open-sourced on GitHub
         </a>
       </div>
+      <div>Definitions from SheCodes Dictionary API 💜</div>
       <div>
         Photos provided by{" "}
         <a href="https://www.pexels.com" target="_blank" rel="noreferrer">

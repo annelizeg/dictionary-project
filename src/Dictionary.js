@@ -12,8 +12,14 @@ export default function Dictionary(props) {
   const [photos, setPhotos] = useState(null);
 
   function getKeywordMeanings(response) {
-    // console.log(response.data);
-    setResults(response.data);
+    console.log(response);
+    if (response.data.status !== "not_found") {
+      setResults(response.data);
+    } else {
+      alert(
+        "Sorry, we couldn't find the word you were looking for. Please try again."
+      );
+    }
   }
 
   function handelPexelsResponse(response) {
@@ -21,15 +27,17 @@ export default function Dictionary(props) {
   }
 
   function search() {
-    //SelfNote - need to decide which API I will be using in the end
     //Documentation: SheCodes Dictionary API - https://www.shecodes.io/learn/apis/dictionary
     const apiKey = "feb0504864ab3c8o978403c9t3b099b5";
     const dictionaryApiURL = `https://api.shecodes.io/dictionary/v1/define?word=${keyword}&key=${apiKey}`;
 
-    //Documentation: Free Dictionary API - https://dictionaryapi.dev/
-    // const dictionaryApiURL = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
-
-    axios.get(dictionaryApiURL).then(getKeywordMeanings);
+    axios
+      .get(dictionaryApiURL)
+      .then(getKeywordMeanings)
+      .catch((error) => {
+        console.log(error);
+        alert("Sorry, an unexpected error occured. Please try again.");
+      });
 
     //Documentation: Pexels Images/Videos API - https://www.pexels.com/api/documentation?language=javascript#introduction
     const pexelsApiKey =
