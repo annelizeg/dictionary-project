@@ -1,13 +1,8 @@
 .App {
-  /* background-color: #e5e7eb; */
-  /* background-color: #f9fafb; */
   background-color: #dfebe5;
-  /* color: #111827; */
-  /* color: #000; */
 }
 
 .App .container {
-  /* background-color: #1e3a8a; */
   background-color: #065f46;
   max-width: 960px;
   padding: 60px;
@@ -19,8 +14,6 @@
   text-align: center;
   padding: 0 0 30px;
   color: #fff;
-  /* color: #111827; */
-  /* color: #374151; */
 }
 
 .App h1 {
@@ -28,24 +21,6 @@
   font-weight: 700;
   text-shadow: 1px 2px 1px #111827, 2px 3px 0px #facc15;
 }
-
-/* 
-Colours: 
-#1E3A8A //Deep Blue
-#065f46 //Deep Green
-#FACC15 // Yellow highlight
-#6D28D9 or #9333EA //Bright Purple
-#F9FAFB //Off-white
-
- text: 
-  primary: '#111827',
-  secondary: '#374151
-
-*/
-/* Combo 1
-background-color: #e5e7eb;
-background-color: rgb(176, 156, 196);
-*/
 
 @media (max-width: 575px) {
   .App .container {

@@ -1,6 +1,8 @@
 import React from "react";
 import "./Synonyms.css";
 
+/* Display the indevidual keyword synonyms */
+
 export default function Synonyms(props) {
   if (props.synonyms) {
     return (

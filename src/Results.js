@@ -2,9 +2,9 @@ import React from "react";
 import Meanings from "./Meanings";
 import "./Results.css";
 
-export default function Results(props) {
-  console.log(props);
+/* Display the Keyword results */
 
+export default function Results(props) {
   if (props.results) {
     return (
       <div className="Results">

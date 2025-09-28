@@ -1,6 +1,8 @@
 import React from "react";
 import "./Photos.css";
 
+/* Display the keyword photos */
+
 export default function Photos(props) {
   if (props.photos) {
     return (

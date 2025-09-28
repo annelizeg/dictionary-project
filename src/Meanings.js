@@ -2,9 +2,9 @@ import React from "react";
 import Synonyms from "./Synonyms";
 import "./Meanings.css";
 
-export default function Meanings(props) {
-  //   console.log(props);
+/* Display the indevidual keyword meanings */
 
+export default function Meanings(props) {
   const definition = props.meaning.definition;
   const example = props.meaning.example ? `"${props.meaning.example}"` : null;
 

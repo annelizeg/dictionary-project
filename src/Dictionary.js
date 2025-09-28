@@ -6,13 +6,14 @@ import Photos from "./Photos";
 import "./Dictionary.css";
 
 export default function Dictionary(props) {
+  // STATES
   const [keyword, setKeyword] = useState(props.defaultKeyword);
   const [results, setResults] = useState(null);
   const [loaded, setLoaded] = useState(false);
   const [photos, setPhotos] = useState(null);
 
+  // Set results to Dictionary API response and call photoSearch function
   function getKeywordMeanings(response) {
-    console.log(response);
     if (response.data.status !== "not_found") {
       setResults(response.data);
       photoSearch();
@@ -23,10 +24,7 @@ export default function Dictionary(props) {
     }
   }
 
-  function handelPexelsResponse(response) {
-    setPhotos(response.data.photos);
-  }
-
+  // Get Photos from Pexels API
   function photoSearch() {
     //Documentation: Pexels Images/Videos API - https://www.pexels.com/api/documentation?language=javascript#introduction
     const pexelsApiKey =
@@ -36,6 +34,11 @@ export default function Dictionary(props) {
     axios.get(pexelsApiUrl, { headers }).then(handelPexelsResponse);
   }
 
+  function handelPexelsResponse(response) {
+    setPhotos(response.data.photos);
+  }
+
+  // Get keyword from Dictionary API
   function search() {
     //Documentation: SheCodes Dictionary API - https://www.shecodes.io/learn/apis/dictionary
     const apiKey = "feb0504864ab3c8o978403c9t3b099b5";
